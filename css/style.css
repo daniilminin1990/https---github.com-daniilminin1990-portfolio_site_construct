@@ -35,7 +35,7 @@ p {
 
 .container {
   width: 100%;
-  max-width: 941px;
+  max-width: 940px;
   margin: 0 auto;
 }
 
@@ -49,7 +49,7 @@ a {
   background: url("../img/bg.jpg") no-repeat center top / cover;
   text-align: center;
   padding: 41px 0 71px;
-  min-height: 768px;
+  max-height: 768px;
   color: var(--white);
 }
 
@@ -69,7 +69,6 @@ a {
 .preheader__text {
   margin-bottom: 214px;
   word-spacing: 3px;
-
 }
 
 .preheader__scroll-text {
@@ -79,9 +78,15 @@ a {
   letter-spacing: 4px;
 }
 
+@media screen and (max-width: 625px) {
+  .preheader__text {
+    margin-bottom: 140px;
+  }
+}
+
 /* * Header */
 .header {
-  margin: 22px 0 19px;
+  margin: 22px 0 55px;
 }
 
 .header__logo {
@@ -113,9 +118,38 @@ a {
   margin-right: 0;
 }
 
+.nav-flex__item:hover {
+  color: var(--accent-color);
+}
+
 .header__underline {
   height: 1px;
   background-color: #E6E6E6;
+}
+
+@media screen and (max-width: 625px) {
+  .header__flex {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .header__logo {
+    margin: 0 20px 20px;
+  }
+
+  .header__flex-item a {
+    display: block;
+  }
+
+  .header__flex:first-child {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-flex__item {
+    margin: 0 10px;
+  }
 }
 
 /* * Section Our story */
@@ -124,35 +158,39 @@ a {
 .story__inner {
   display: flex;
   justify-content: center;
+  margin-bottom: 118px;
 }
 
 .story__leftBlock {
-  max-width: 398px;
+  max-width: 405px;
   margin-right: 77px;
 }
 
-.story__title_2 {
+.title-h2 {
   text-transform: uppercase;
   text-align: center;
-  font-weight: bold;
-  font-size: 18px;
-  padding: 50px 0;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1.3px;
   color: var(--dark-color);
+
 }
 
-.story__title_2:after {
+.title-h2:after {
   content: '';
   width: 50px;
   height: 2px;
   background-color: var(--accent-color);
   display: block;
-  margin: 10px auto 0;
+  margin: 10px auto 53px;
 }
 
-.story__title_3 {
+.story__title_h3 {
   font-weight: bold;
   font-size: 20px;
   color: var(--dark-color);
+  letter-spacing: 0.2px;
+  margin-bottom: 30px;
 
 }
 
@@ -160,7 +198,12 @@ a {
   color: var(--accent-color);
 }
 
-.story__text {}
+.story__text {
+  color: var(--dark-color);
+  font-size: 13px;
+  line-height: 23px;
+  letter-spacing: 0.18px;
+}
 
 .story__rightBlock {
   display: flex;
@@ -174,8 +217,10 @@ a {
   text-transform: uppercase;
   padding: 15px;
   width: 140px;
-  height: 224px;
+  height: 223px;
   margin-right: 20px;
+  line-height: 29px;
+  letter-spacing: 0.188px;
 }
 
 .story__item:first-child {
@@ -193,7 +238,7 @@ a {
 
 @media screen and (max-width: 1440px) {
   .container {
-    padding: 0 50px;
+    /* padding: 0 50px; */
   }
 }
 
